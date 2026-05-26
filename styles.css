@@ -723,3 +723,25 @@ body {
 @media (max-width: 480px) {
     .main-title { font-size: 2.5rem; }
 }
+
+.btn-repo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background: rgba(168, 85, 247, 0.08);
+    border: 1px solid rgba(192, 132, 252, 0.2);
+    border-radius: 4px;
+    color: #d8b4fe;
+    font-size: 0.875rem;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.btn-repo:hover {
+    background: linear-gradient(to right, #9333ea, #c026d3);
+    color: #ffffff;
+    border-color: transparent;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(168, 85, 247, 0.25);
+}
