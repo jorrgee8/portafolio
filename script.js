@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const targetSection = document.getElementById(targetId);
             
             if (targetSection) {
-                const offset = 100;
+                const offset = 90;
                 const elementPosition = targetSection.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.scrollY - offset;
 
@@ -45,8 +45,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }, navObserverOptions);
 
     const fadeObserverOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+        threshold: 0.05,
+        rootMargin: '0px 0px -30px 0px'
     };
 
     const fadeObserver = new IntersectionObserver(function(entries) {
@@ -60,8 +60,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     sections.forEach(section => {
         section.style.opacity = '0';
-        section.style.transform = 'translateY(50px)';
-        section.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+        section.style.transform = 'translateY(20px)';
+        section.style.transition = 'opacity 0.5s ease-out, transform 0.5s ease-out';
         fadeObserver.observe(section);
         navObserver.observe(section);
     });
